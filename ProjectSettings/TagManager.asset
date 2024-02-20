@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -46,6 +47,12 @@ TagManager:
     locked: 0
   - name: Tilemap
     uniqueID: 81427475
+    locked: 0
+  - name: Decoration
+    uniqueID: 1140002395
+    locked: 0
+  - name: Player
+    uniqueID: 3657808707
     locked: 0
   - name: Context
     uniqueID: 1969423531
