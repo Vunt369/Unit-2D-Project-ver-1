@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Surface
   layers:
   - Default
   - TransparentFX
@@ -11,8 +12,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Climb
+  - Enemies
   - 
   - 
   - 
@@ -49,6 +50,12 @@ TagManager:
     locked: 0
   - name: Context
     uniqueID: 1969423531
+    locked: 0
+  - name: Climb
+    uniqueID: 4015580673
+    locked: 0
+  - name: Player
+    uniqueID: 1342090523
     locked: 0
   - name: Enemies
     uniqueID: 1124190971
