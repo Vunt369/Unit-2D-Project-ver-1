@@ -118,7 +118,7 @@ public class PlayerMovement_Nhannq : MonoBehaviour
     {
         if (Input.GetKeyDown("w") && canJump && !capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climb")))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 6.2f);
+            rb.velocity = new Vector2(rb.velocity.x, 6.3f);
             canJump = false;
             animator.SetBool("CanJump", true);
         }
