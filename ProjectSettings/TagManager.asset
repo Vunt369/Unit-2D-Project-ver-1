@@ -45,6 +45,9 @@ TagManager:
   - name: Background
     uniqueID: 2618225695
     locked: 0
+  - name: Far
+    uniqueID: 2732130119
+    locked: 0
   - name: Tilemap
     uniqueID: 81427475
     locked: 0
