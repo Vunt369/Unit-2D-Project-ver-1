@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator anmi;
 
     private float dirX = 0f;
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 7f;
+    [SerializeField] private float moveSpeed = 14f;
+    [SerializeField] private float jumpForce = 14f;
 
     private enum MovementSate { idle, running, jumping, falling }
     private MovementSate state = MovementSate.idle;
