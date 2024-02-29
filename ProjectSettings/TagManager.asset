@@ -4,17 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Surface
+  - Ground
+  - Ladder
+  - Enemies
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - Climb
-  - Enemies
-  - 
+  - FoceGround
+  - Climbing
+  - Background
   - 
   - 
   - 
@@ -48,15 +50,18 @@ TagManager:
   - name: Tilemap
     uniqueID: 81427475
     locked: 0
-  - name: Context
-    uniqueID: 1969423531
-    locked: 0
-  - name: Climb
-    uniqueID: 4015580673
-    locked: 0
   - name: Player
-    uniqueID: 1342090523
+    uniqueID: 147725951
     locked: 0
   - name: Enemies
     uniqueID: 1124190971
+    locked: 0
+  - name: Climbing
+    uniqueID: 3586019337
+    locked: 0
+  - name: Context
+    uniqueID: 1969423531
+    locked: 0
+  - name: FoceGround
+    uniqueID: 1654400265
     locked: 0
