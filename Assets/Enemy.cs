@@ -7,20 +7,18 @@ public class Enemy : MonoBehaviour
 {
 
     public GameObject redPartcles;
-    public float health = 100;
+    public float health = 40;
     public Animator animator;
+
     public void TakeDamage(float damage)
     {
         health -= damage;
         if (health <= 0)
         {
-            Die();
+            //Die();
             animator.SetBool("isDead", true);
-            Debug.Log("Da die");
+            //redPartcles.SetActive(false);
         }
-    }
-    void Start()
-    {
     }
     void Die()
     {

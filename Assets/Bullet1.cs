@@ -7,6 +7,7 @@ public class Bullet1 : MonoBehaviour
     public float speed = 8f;    
     public Rigidbody2D rb;
     public GameObject impactEffect;
+
     void Start()
     {
         rb.velocity = transform.right * speed;
