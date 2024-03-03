@@ -37,6 +37,7 @@ public class Hearts : MonoBehaviour
         if(hearts == 0)
         {
             Destroy(this.gameObject);
+            Time.timeScale = 0;
 		}
         if(seconds == 3f)
         {
@@ -53,14 +54,5 @@ public class Hearts : MonoBehaviour
             animator.SetBool("hurt", true);
         }
 	}
-/*    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemies") && seconds == 3f)
-        {
-            animator.SetBool("hurt", false);
-            Debug.Log("Quay lai binh thuong");
-        }
-
-    }*/
 
 }
