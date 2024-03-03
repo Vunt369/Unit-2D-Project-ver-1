@@ -6,7 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-<<<<<<< HEAD
     path: Assets/Super Grotto Escape/Scenes/MainMenu.unity
     guid: 893a8e30640d455479409cc94d94a21c
   - enabled: 0
@@ -21,8 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Super Grotto Escape/Scenes/Level 3.unity
     guid: f40a13fea1016ee4694ef8900a40cbcd
-=======
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
->>>>>>> vunt
+  - enabled: 1
+    path: Assets/Super Grotto Escape/Scenes/Scence_Vu.unity
+    guid: f2c59fe3fdd406a46a86112dcd8a3d2e
   m_configObjects: {}
