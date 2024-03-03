@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,13 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anmi;
+    private float timer = 0;
+    private bool attacking = false;
+    private float timeToAttack = 0.2f;
+    private CapsuleCollider2D capsuleCollider;
+
+    public Transform shootingPoint;
+    public GameObject bulletPrefab;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -24,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
         anmi = GetComponent<Animator>();
     }
 
@@ -40,6 +49,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
+        /*if(Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+
+        }*/
+
+        ShootAnimation();
         UpdateAnimationState();
 
     }
@@ -77,6 +92,39 @@ public class PlayerMovement : MonoBehaviour
 
         anmi.SetInteger("state", (int)state);
     }
+
+    void ShootAnimation()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            anmi.SetBool("IsShoot", true);
+        }
+        else if (Input.GetButtonUp("Fire1"))
+        {
+            attacking = true;
+
+        }
+        if (attacking)
+        {
+            timer += Time.deltaTime;
+            if (timer >= timeToAttack)
+            {
+                timer = 0;
+                attacking = false;
+                anmi.SetBool("IsShoot", false);
+            }
+        }
+    }
+
+    /*private void HurtAnimation()
+    {
+        if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        {
+            anmi.SetBool("IsHurt", true);
+            rb.velocity = new Vector2(-27f, 5f);
+        }
+
+    }*/
 
     private bool IsGrounded()
     {

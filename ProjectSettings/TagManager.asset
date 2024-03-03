@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bat
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -46,4 +48,7 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 539987043
+    locked: 0
+  - name: Enemies
+    uniqueID: 486286665
     locked: 0
