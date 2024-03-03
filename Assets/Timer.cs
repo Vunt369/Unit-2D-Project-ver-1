@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI timerText;
+    public TextMeshProUGUI timerText;
     float elapsedTime;
 
     // Update is called once per frame
