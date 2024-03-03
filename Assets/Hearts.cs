@@ -7,31 +7,29 @@ public class Hearts : MonoBehaviour
 {
     public int hearts = 3;
     public TextMeshProUGUI heartsText;
-    public float seconds = 5f;
-	private float blinkInterval = 0.5f;
+    public float seconds = 3f;
 	public SpriteRenderer spriteRenderer;
-	// Start is called before the first frame update
-	void Start()
+    public Animator animator;
+    void Start()
     {
         heartsText.SetText(hearts.ToString());
     }
 
-    // Update is called once per frame
     void Update()
     {
-		if (seconds >= 5f)
+		if (seconds >= 3f)
 		{
-			seconds = 5f; // Reset seconds to 0 if it reaches 5x
+			seconds = 3f;
 		}
 		else
 		{
-			seconds += Time.deltaTime; // Increment seconds by the time passed
+			seconds += Time.deltaTime;
 			Color color = spriteRenderer.color;
 			color.a = 0.5f;
 			spriteRenderer.color = color;
-			if (seconds >= 5f)
+			if (seconds >= 3f)
 			{
-				seconds = 5f; // Ensure seconds doesn't go beyond 5
+				seconds = 3f;
 				color.a =1f;
 				spriteRenderer.color = color;
 			}
@@ -39,16 +37,22 @@ public class Hearts : MonoBehaviour
         if(hearts == 0)
         {
             Destroy(this.gameObject);
+            Time.timeScale = 0;
 		}
-	}
+        if(seconds == 3f)
+        {
+            animator.SetBool("hurt", false);
+        }
+    }
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-        if (collision.CompareTag("Enemies") && seconds == 5f)
+        if (collision.CompareTag("Enemies") && seconds == 3f)
         {
             hearts = hearts - 1;
             heartsText.SetText(hearts.ToString());
             seconds = 0;
+            animator.SetBool("hurt", true);
         }
 	}
-   
+
 }

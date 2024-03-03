@@ -7,10 +7,10 @@ public class SkeletonMovement : MonoBehaviour
 {
    
    
-    public float speed = 2f;
+    public float speed = 0.5f;
     public float distanceMoved;
     private Rigidbody2D rb;
-    public float distance = 5f;
+    public float distance = 2f;
     private Vector3 startPosition;
     SpriteRenderer spriteRenderer;
     void Start()
@@ -35,7 +35,7 @@ public class SkeletonMovement : MonoBehaviour
         {
             renderer.flipX = false;
         }
-        else if (distanceMove > 4.95f)
+        else if (distanceMove > 1.95f)
         {
             renderer.flipX = true;
         }

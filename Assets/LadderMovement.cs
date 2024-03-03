@@ -6,7 +6,7 @@ public class LadderMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     private float vertical;
-    private float speed = 8f;
+    private float speed =  4f;
     private bool isLadder;
     private bool isClimbing;
 
