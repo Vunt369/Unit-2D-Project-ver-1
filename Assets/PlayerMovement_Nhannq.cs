@@ -47,7 +47,7 @@ public class PlayerMovement_Nhannq : MonoBehaviour
         JumpAnimation(jumpSpeed);
         ShootAnimation();
         ClimbLadder();
-        HurtAnimation();
+        //HurtAnimation();
 
     }
 
