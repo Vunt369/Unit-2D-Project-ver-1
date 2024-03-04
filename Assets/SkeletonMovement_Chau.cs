@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonMovement : MonoBehaviour
+public class SkeletonMovement_Chau : MonoBehaviour
 {
 
     public float speed = 0.5f;

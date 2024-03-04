@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BatMovement : MonoBehaviour
+public class BatMovement_Chau : MonoBehaviour
 {
     private Rigidbody2D rb;
     float distance = 3f;
