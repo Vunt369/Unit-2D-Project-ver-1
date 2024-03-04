@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerMovement_Nhannq : MonoBehaviour
 {
@@ -53,18 +54,18 @@ public class PlayerMovement_Nhannq : MonoBehaviour
 
     private void HurtAnimation()
     {
-        //if (!capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
-        //{
-        //    animator.SetBool("IsHurt", false);
-        //    return;
-        //}
+        if (!capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        {
+            animator.SetBool("IsHurt", false);
+            return;
+        }
         if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
         {
             animator.SetBool("IsHurt", true);
             rb.velocity = new Vector2(-27f, 5f);
         }
 
-        
+
         //rb.velocity = new Vector2(0f, -10f);
 
     }
@@ -77,7 +78,7 @@ public class PlayerMovement_Nhannq : MonoBehaviour
             rb.gravityScale = gravityScaleAtStart;
             return;
         }
-        else 
+        else
         {
             if (Input.GetKeyDown("w") || Input.GetKeyDown("s"))
             {
@@ -86,9 +87,9 @@ public class PlayerMovement_Nhannq : MonoBehaviour
                 rb.velocity = climbVelocity;
                 rb.gravityScale = 0f;
             }
-            
+
         }
-        
+
     }
 
     void ShootAnimation()
@@ -157,7 +158,8 @@ public class PlayerMovement_Nhannq : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Surface")) {
+        if (other.gameObject.CompareTag("Surface"))
+        {
             canJump = true;
             animator.SetBool("CanJump", false);
             animator.SetBool("IsSlide", false);

@@ -7,7 +7,7 @@ public class Timer_Nhannq : MonoBehaviour
 {
     public class Timer : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI timerText;
+        public TextMeshProUGUI timerText;
         float elapsedTime;
 
         // Update is called once per frame
