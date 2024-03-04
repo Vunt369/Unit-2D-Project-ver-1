@@ -11,16 +11,21 @@ public class Bullet1 : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        BatEnemy enemy = collision.GetComponent<BatEnemy >();
-        if (enemy != null)
+        if (collision.gameObject.CompareTag("Bat"))
         {
-            enemy.TakeDamage(20);
+
+            BatEnemy enemy = collision.GetComponent<BatEnemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(20);
+            }
+
         }
+        
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
