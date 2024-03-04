@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Super Grotto Escape/Scenes/MainMenu.unity
+    path: Assets/Super Grotto Escape/Scenes/Main Menu.unity
     guid: 893a8e30640d455479409cc94d94a21c
   - enabled: 0
     path: Assets/Super Grotto Escape/Scenes/SelectMenu.unity

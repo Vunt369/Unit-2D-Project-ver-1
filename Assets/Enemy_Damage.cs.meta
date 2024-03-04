@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Bullet1.cs.meta
-guid: cdbc461c009786142b0b2e16fc81fe7c
-========
-guid: ee3a2761e868aaa43b29b7f4109f2735
->>>>>>>> nhannq:Assets/Bullet_NhanNQ.cs.meta
+guid: cbcc14209b7199b428abbc9627d47a27
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -22,6 +22,14 @@ public class SelectMenu : MonoBehaviour
             buttons[i].interactable = true;
         }
     }
+
+    public void ResetLevel()
+    {
+        for (int i = 1; i < buttons.Length; i++)
+        {
+            buttons[i].interactable = false;
+        }
+    }
     public void OpenLevel(int levelId)
     {
         string levelName = "Level " + levelId;
