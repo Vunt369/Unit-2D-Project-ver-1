@@ -25,7 +25,7 @@ public class Shooting : MonoBehaviour
         {
             if (!pauseMenu.activeSelf)
             {
-                Debug.Log("Shoot");
+                Debug.Log("Bat dau ban");
                 if (numberOfButllet > 0)
                 {
                     numberOfButllet--;
@@ -34,7 +34,7 @@ public class Shooting : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("No bullet");
+                    Debug.Log("HetDan");
                 }
             }
         }

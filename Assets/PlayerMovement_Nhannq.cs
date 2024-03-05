@@ -143,17 +143,25 @@ public class PlayerMovement_Nhannq : MonoBehaviour
         if (dirX > 0)
         {
             animator.SetFloat("Speed", Mathf.Abs(dirX * 4f));
-            sprite.flipX = false;
+            //sprite.flipX = false;
+            Rotate(0);
+
         }
         else if (dirX < 0)
         {
             animator.SetFloat("Speed", Mathf.Abs(dirX * 4f));
-            sprite.flipX = true;
+            //sprite.flipX = true;
+            Rotate(180f);
         }
         else
         {
             animator.SetFloat("Speed", 0);
         }
+    }
+
+    private void Rotate(float angle)
+    {
+        character.transform.rotation = Quaternion.Euler(0f, angle, 0f);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
