@@ -5,14 +5,19 @@ using UnityEngine;
 
 public class Hearts : MonoBehaviour
 {
-    public int hearts = 3;
-    public TextMeshProUGUI heartsText;
+    public static int hearts;
     public float seconds = 3f;
 	public SpriteRenderer spriteRenderer;
     public Animator animator;
+    public GameObject heart1, heart2, heart3, gameOverObject;
+
     void Start()
     {
-        heartsText.SetText(hearts.ToString());
+        hearts = 3;
+        heart1.gameObject.SetActive(true);
+        heart2.gameObject.SetActive(true);
+        heart3.gameObject.SetActive(true);
+        gameOverObject.gameObject.SetActive(false);
     }
 
     void Update()
@@ -43,16 +48,50 @@ public class Hearts : MonoBehaviour
         {
             animator.SetBool("hurt", false);
         }
+
+
+        switch (hearts)
+        {
+            case 3:
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(true);
+                break;
+            case 2:
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(false);
+                break;
+            case 1:
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(false);
+                heart3.gameObject.SetActive(false);
+                break;
+            case 0:
+                heart1.gameObject.SetActive(false);
+                heart2.gameObject.SetActive(false);
+                heart3.gameObject.SetActive(false);
+                gameOverObject.gameObject.SetActive(true);
+                Time.timeScale = 0;
+                break;
+            default:
+                heart1.gameObject.SetActive(false);
+                heart2.gameObject.SetActive(false);
+                heart3.gameObject.SetActive(false);
+                gameOverObject.gameObject.SetActive(true);
+                Time.timeScale = 0;
+                break;
+        }
     }
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
         if (collision.CompareTag("Enemies") && seconds == 3f)
         {
             hearts = hearts - 1;
-            heartsText.SetText(hearts.ToString());
             seconds = 0;
             animator.SetBool("hurt", true);
         }
+
 	}
 
 }
