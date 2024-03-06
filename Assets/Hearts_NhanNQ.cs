@@ -9,6 +9,13 @@ public class Hearts : MonoBehaviour
     public float seconds = 3f;
     public SpriteRenderer spriteRenderer;
     public Animator animator;
+<<<<<<< HEAD
+    private CapsuleCollider2D capsuleCollider;
+    void Start()
+    {
+        heartsText.SetText(hearts.ToString());
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+=======
     public GameObject heart1, heart2, heart3, gameOverObject;
 
     void Start()
@@ -18,6 +25,7 @@ public class Hearts : MonoBehaviour
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
         gameOverObject.gameObject.SetActive(false);
+>>>>>>> vunt
     }
 
     void Update()
@@ -44,10 +52,14 @@ public class Hearts : MonoBehaviour
             Destroy(this.gameObject);
             Time.timeScale = 0;
         }
+<<<<<<< HEAD
         if (seconds == 3f)
         {
             animator.SetBool("IsHurt", false);
         }
+
+        if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")) && seconds == 3f)
+=======
 
 
         switch (hearts)
@@ -86,12 +98,17 @@ public class Hearts : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
         if (collision.CompareTag("Enemies") && seconds == 3f)
+>>>>>>> vunt
         {
             hearts = hearts - 1;
             seconds = 0;
             animator.SetBool("IsHurt", true);
         }
+<<<<<<< HEAD
+    }
+=======
 
 	}
+>>>>>>> vunt
 
 }
