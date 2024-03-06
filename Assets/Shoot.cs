@@ -12,11 +12,6 @@ public class Shoot : MonoBehaviour
     public int numberOfButllet = 10;
     public TextMeshProUGUI bulletText;
     [SerializeField] GameObject pauseMenu;
-    //private bool isButtonPressed = false;
-    /*void ButtonPressed()
-    {
-        isButtonPressed = true;
-    }*/
     void Start()
     {
         bulletText.SetText(numberOfButllet.ToString());
@@ -25,7 +20,7 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (!pauseMenu.activeSelf)
+            if (!pauseMenu.active)
             {
                 Debug.Log("Bat dau ban");
                 if (numberOfButllet > 0)
