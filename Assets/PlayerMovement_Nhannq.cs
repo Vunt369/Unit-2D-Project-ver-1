@@ -174,4 +174,5 @@ public class PlayerMovement_Nhannq : MonoBehaviour
             animator.SetBool("IsClimb", false);
         }
     }
+
 }

@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 25357670}
   - component: {fileID: 25357669}
   - component: {fileID: 25357668}
+  - component: {fileID: 25357674}
+  - component: {fileID: 25357673}
   m_Layer: 9
   m_Name: fly-eye1 (10)
   m_TagString: Untagged
@@ -319,6 +321,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &25357673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25357666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &25357674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25357666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redPartcles: {fileID: 25357666}
+  health: 40
+  animator: {fileID: 25357671}
 --- !u!1 &49855855
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 49855855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45, y: -2.19, z: 0}
+  m_LocalPosition: {x: 28.93, y: 0.4, z: 0}
   m_LocalScale: {x: 2.9802375, y: 2.8917975, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -554,8 +583,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000047683717, y: -0.017215038}
-  m_Size: {x: 0.25114012, y: 0.34557}
+  m_Offset: {x: 0.0063788686, y: -0.027076501}
+  m_Size: {x: 0.22562392, y: 0.32584703}
   m_Direction: 0
 --- !u!114 &49855863
 MonoBehaviour:
@@ -1051,6 +1080,7 @@ GameObject:
   - component: {fileID: 360243850}
   - component: {fileID: 360243855}
   - component: {fileID: 360243856}
+  - component: {fileID: 360243857}
   m_Layer: 9
   m_Name: skeleton-idle1 (2)
   m_TagString: Untagged
@@ -1245,9 +1275,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 360243848}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 360243853}
+--- !u!114 &360243857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360243848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &382982716
 GameObject:
   m_ObjectHideFlags: 0
@@ -25944,7 +25986,7 @@ Transform:
   m_GameObject: {fileID: 463786130}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.331547, y: -0.97257376, z: -10}
+  m_LocalPosition: {x: 32.261547, y: 1.6174263, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26038,7 +26080,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.331547, y: -0.97257376, z: -10}
+  m_LocalPosition: {x: 32.261547, y: 1.6174263, z: -10}
   m_LocalScale: {x: 0.6573101, y: 0.64331526, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45452,6 +45494,7 @@ GameObject:
   - component: {fileID: 866462623}
   - component: {fileID: 866462622}
   - component: {fileID: 866462627}
+  - component: {fileID: 866462628}
   m_Layer: 9
   m_Name: fly-eye1 (8)
   m_TagString: Untagged
@@ -45646,9 +45689,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 866462620}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 866462625}
+--- !u!114 &866462628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866462620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &884144230
 GameObject:
   m_ObjectHideFlags: 0
@@ -46919,6 +46974,7 @@ GameObject:
   - component: {fileID: 1168455500}
   - component: {fileID: 1168455505}
   - component: {fileID: 1168455506}
+  - component: {fileID: 1168455507}
   m_Layer: 9
   m_Name: skeleton-idle1 (3)
   m_TagString: Untagged
@@ -47113,9 +47169,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 1168455498}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 1168455503}
+--- !u!114 &1168455507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168455498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1169722227
 GameObject:
   m_ObjectHideFlags: 0
@@ -47760,6 +47828,7 @@ GameObject:
   - component: {fileID: 1282775031}
   - component: {fileID: 1282775030}
   - component: {fileID: 1282775035}
+  - component: {fileID: 1282775036}
   m_Layer: 9
   m_Name: fly-eye1 (6)
   m_TagString: Untagged
@@ -47954,9 +48023,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 1282775028}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 1282775033}
+--- !u!114 &1282775036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282775028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1287504093
 GameObject:
   m_ObjectHideFlags: 0
@@ -48889,6 +48970,7 @@ GameObject:
   - component: {fileID: 1510643757}
   - component: {fileID: 1510643756}
   - component: {fileID: 1510643761}
+  - component: {fileID: 1510643762}
   m_Layer: 9
   m_Name: fly-eye1 (7)
   m_TagString: Untagged
@@ -49083,9 +49165,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 1510643754}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 1510643759}
+--- !u!114 &1510643762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510643754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1528570663
 GameObject:
   m_ObjectHideFlags: 0
@@ -49479,6 +49573,7 @@ GameObject:
   - component: {fileID: 1851395562}
   - component: {fileID: 1851395561}
   - component: {fileID: 1851395565}
+  - component: {fileID: 1851395566}
   m_Layer: 9
   m_Name: lizard-shoot1 (1)
   m_TagString: Untagged
@@ -49646,9 +49741,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 1851395559}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 1851395562}
+--- !u!114 &1851395566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851395559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1871881721
 GameObject:
   m_ObjectHideFlags: 0
@@ -49831,6 +49938,7 @@ GameObject:
   - component: {fileID: 1896564104}
   - component: {fileID: 1896564106}
   - component: {fileID: 1896564107}
+  - component: {fileID: 1896564108}
   m_Layer: 9
   m_Name: lizard-shoot1
   m_TagString: Untagged
@@ -49998,9 +50106,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 1896564101}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 1896564104}
+--- !u!114 &1896564108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896564101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1944064956
 GameObject:
   m_ObjectHideFlags: 0
@@ -50181,6 +50301,7 @@ GameObject:
   - component: {fileID: 1971827378}
   - component: {fileID: 1971827377}
   - component: {fileID: 1971827382}
+  - component: {fileID: 1971827383}
   m_Layer: 9
   m_Name: fly-eye1 (9)
   m_TagString: Untagged
@@ -50375,9 +50496,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 1971827375}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 1971827380}
+--- !u!114 &1971827383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971827375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1998582173
 GameObject:
   m_ObjectHideFlags: 0
@@ -50393,6 +50526,7 @@ GameObject:
   - component: {fileID: 1998582176}
   - component: {fileID: 1998582175}
   - component: {fileID: 1998582180}
+  - component: {fileID: 1998582181}
   m_Layer: 9
   m_Name: fly-eye1 (5)
   m_TagString: Untagged
@@ -50587,9 +50721,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 1998582173}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 1998582178}
+--- !u!114 &1998582181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998582173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2086715047
 GameObject:
   m_ObjectHideFlags: 0
@@ -50605,6 +50751,7 @@ GameObject:
   - component: {fileID: 2086715048}
   - component: {fileID: 2086715054}
   - component: {fileID: 2086715055}
+  - component: {fileID: 2086715056}
   m_Layer: 9
   m_Name: skeleton-idle1 (1)
   m_TagString: Untagged
@@ -50799,9 +50946,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbcc14209b7199b428abbc9627d47a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redPartcles: {fileID: 0}
+  redPartcles: {fileID: 2086715047}
   health: 40
-  animator: {fileID: 0}
+  animator: {fileID: 2086715051}
+--- !u!114 &2086715056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086715047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bd38c6f03743540afe0e355deecfaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2108181487
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2276096744449194192}
   - component: {fileID: 891918610075343251}
   - component: {fileID: 4588573318477831042}
-  - component: {fileID: 2047565029289879527}
-  - component: {fileID: 2615353733264696666}
+  - component: {fileID: 4484801554715703227}
+  - component: {fileID: 8431618300329140512}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -47.089, y: -9.846, z: -0.70794207}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -150,7 +150,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
---- !u!95 &2047565029289879527
+--- !u!95 &4484801554715703227
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ Animator:
   m_GameObject: {fileID: 549728475266973049}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d2109cf3a628b3544aec2d85fe8e7c15, type: 2}
+  m_Controller: {fileID: 9100000, guid: 67c1807689946e2408f44a99db94ab49, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -171,7 +171,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2615353733264696666
+--- !u!114 &8431618300329140512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,4 +185,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rb: {fileID: 891918610075343251}
-  impactEffect: {fileID: 549728475266973049}
+  impactEffect: {fileID: 6737433340028098296, guid: a7673409f2fb1074191a30496b7d4de1, type: 3}
