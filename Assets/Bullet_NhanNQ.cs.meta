@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Bullet1.cs.meta
+guid: fbc872f2263fde64e9f3b9300be0366c
+========
+guid: ee3a2761e868aaa43b29b7f4109f2735
+>>>>>>>> nhannq:Assets/Bullet_NhanNQ.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
