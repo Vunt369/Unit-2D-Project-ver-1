@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Enemy
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -14,9 +16,9 @@ TagManager:
   - UI
   - 
   - Ground
-  - 
-  - 
-  - 
+  - Wall
+  - Player
+  - Enemies
   - 
   - 
   - 
@@ -48,9 +50,12 @@ TagManager:
   - name: Tilemap
     uniqueID: 81427475
     locked: 0
-  - name: Context
+  - name: Player
     uniqueID: 1969423531
     locked: 0
-  - name: Enemies
+  - name: Ground
     uniqueID: 1124190971
+    locked: 0
+  - name: Enemies
+    uniqueID: 3086678877
     locked: 0

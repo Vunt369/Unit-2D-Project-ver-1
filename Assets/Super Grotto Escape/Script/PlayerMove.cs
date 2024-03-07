@@ -48,13 +48,13 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
             grounded = true;
     }
-    private bool isGrounded()
+    private bool IsGrounded()
     {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit2D.collider != null;
     }
-    public bool canAttack()
+    public bool CanAttack()
     {
-        return HorizontalInput == 0 && isGrounded();
+        return HorizontalInput == 0 && IsGrounded();
     }
 }

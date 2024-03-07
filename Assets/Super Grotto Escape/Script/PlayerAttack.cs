@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private float attackCooldown;
-    private float cooldownTime = 999999999;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private GameObject[] bullet;
+    private float cooldownTime = Mathf.Infinity;
     private Animator animator;
     private PlayerMove PlayerMove;
 
@@ -17,9 +18,15 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && cooldownTime > attackCooldown && PlayerMove.canAttack()) {
+        //if (Input.GetMouseButtonDown(0) && cooldownTime > attackCooldown && PlayerMove.CanAttack()) 
+        //{
+        //    Attack();
+        //    cooldownTime += Time.deltaTime;
+        //}        
+        
+        if (Input.GetMouseButtonDown(0) && PlayerMove.CanAttack()) 
+        {
             Attack();
-
             cooldownTime += Time.deltaTime;
         }
     }
@@ -28,6 +35,18 @@ public class PlayerAttack : MonoBehaviour
     {
         animator.SetTrigger("attack");
         cooldownTime = 0;
+
+        bullet[Findbullet()].transform.position = attackPoint.position;
+        bullet[Findbullet()].GetComponent<ShootingController>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
+    private int Findbullet()
+    {
+        for (int i = 0; i < bullet.Length; i++)
+        {
+            if (!bullet[i].activeInHierarchy)
+                return i;
+        }
+        return 0;
+    }
 }
