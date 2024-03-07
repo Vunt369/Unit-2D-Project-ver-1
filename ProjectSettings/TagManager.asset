@@ -8,6 +8,9 @@ TagManager:
   - Ladder
   - Enemies
   - Surface
+  - Ground
+  - Enemy
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -19,9 +22,10 @@ TagManager:
   - Climbing
   - Background
   - Enemies
-  - 
-  - 
-  - 
+  - Ground
+  - Wall
+  - Player
+  - Enemies
   - 
   - 
   - 
@@ -66,6 +70,9 @@ TagManager:
   - name: Context
     uniqueID: 1969423531
     locked: 0
-  - name: FoceGround
-    uniqueID: 1654400265
+  - name: Ground
+    uniqueID: 1124190971
+    locked: 0
+  - name: Enemies
+    uniqueID: 3086678877
     locked: 0
