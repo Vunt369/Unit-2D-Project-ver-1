@@ -43,6 +43,9 @@ public class SelectMenu : MonoBehaviour
             case 2:
                 SceneManager.LoadScene("Scence_Vu");
                 break;
+            case 3:
+                SceneManager.LoadScene("ThanhDong_Scene");
+                break;
         }
         
     }
