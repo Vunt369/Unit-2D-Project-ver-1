@@ -23,7 +23,7 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (!pauseMenu.activeSelf)
+            if (!pauseMenu.active)
             {
                 Debug.Log("Bat dau ban");
                 if (numberOfButllet > 0)

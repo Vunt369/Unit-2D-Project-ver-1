@@ -28,11 +28,22 @@ public class SelectMenu : MonoBehaviour
         for (int i = 1; i < buttons.Length; i++)
         {
             buttons[i].interactable = false;
+            PlayerPrefs.SetInt("ReachedIndex", 1);
+            PlayerPrefs.SetInt("UnlockedLevel", 1);
+            PlayerPrefs.Save();
         }
     }
     public void OpenLevel(int levelId)
     {
-        string levelName = "Level " + levelId;
-        SceneManager.LoadScene(levelName);
+        switch (levelId)
+        {
+            case 1:
+                SceneManager.LoadScene("Level 1");
+                break;
+            case 2:
+                SceneManager.LoadScene("Scence_Vu");
+                break;
+        }
+        
     }
 }

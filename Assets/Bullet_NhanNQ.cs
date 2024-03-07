@@ -20,7 +20,6 @@ public class Bullet_NhanNQ : MonoBehaviour
         if (enemy != null)
         {
             enemy.TakeDamage(20);
-            Debug.Log("Hurt");
         }
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);

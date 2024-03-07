@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndPoint : MonoBehaviour
 {
@@ -10,13 +11,25 @@ public class EndPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("da cham player");
             if(endPointPanel != null)
             {
                 endPointPanel.SetActive(true);
                 turnOffCanvas.SetActive(false);
                 Time.timeScale = 0;
+                Debug.Log("Unlock level");
+                UnlockLevel();
             }
+        }
+    }
+
+    void UnlockLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            Debug.Log(PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.Save();
         }
     }
 }

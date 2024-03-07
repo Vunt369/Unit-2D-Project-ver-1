@@ -87,6 +87,7 @@ public class Hearts : MonoBehaviour
 	{
         if (collision.CompareTag("Enemies") && seconds == 3f)
         {
+            Debug.Log("IsHurt");
             hearts = hearts - 1;
             seconds = 0;
             animator.SetBool("IsHurt", true);
