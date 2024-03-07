@@ -7,9 +7,6 @@ TagManager:
   - Ground
   - Enemy
   - Checkpoint
-  tags:
-  - Ground
-  - Ladder
   - Enemies
   - Surface
   layers:
@@ -45,13 +42,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BlackBackground
+    uniqueID: 1290013937
     locked: 0
   - name: Background
     uniqueID: 2618225695
@@ -79,6 +75,7 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 3086678877
+    locked: 0
   - name: FoceGround
     uniqueID: 1654400265
     locked: 0
