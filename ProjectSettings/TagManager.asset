@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Enemy
+  - Checkpoint
+  tags:
+  - Ground
   - Ladder
   - Enemies
   - Surface
@@ -15,13 +19,17 @@ TagManager:
   - Player
   - Water
   - UI
+  - 
+  - Ground
+  - Wall
+  - Player
+  - Enemies
+  - 
+  - 
   - FoceGround
   - Climbing
   - Background
   - Enemies
-  - 
-  - 
-  - 
   - 
   - 
   - 
@@ -66,6 +74,11 @@ TagManager:
   - name: Context
     uniqueID: 1969423531
     locked: 0
+  - name: Ground
+    uniqueID: 1124190971
+    locked: 0
+  - name: Enemies
+    uniqueID: 3086678877
   - name: FoceGround
     uniqueID: 1654400265
     locked: 0
